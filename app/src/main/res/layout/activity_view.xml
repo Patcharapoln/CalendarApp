@@ -10,7 +10,8 @@
 <LinearLayout
     android:layout_height="50dp"
     android:layout_width="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="#303030">
 
     <EditText
         android:id="@+id/input"
@@ -19,6 +20,9 @@
         android:layout_above="@+id/button"
         android:layout_centerHorizontal="true"
         android:ems="15"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
         android:hint="Please enter event" />
 
     <Button

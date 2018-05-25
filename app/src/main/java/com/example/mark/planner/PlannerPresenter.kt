@@ -9,8 +9,6 @@ import java.util.*
  */
 class PlannerPresenter() {
 
-    private var elist = ArrayList<Event>()
-
     fun remove (event:ArrayList<String>,input :String): ArrayList<String> {
         for(e in event){
             if(e.equals(input))
@@ -18,4 +16,6 @@ class PlannerPresenter() {
         }
         return event
     }
+
+
 }

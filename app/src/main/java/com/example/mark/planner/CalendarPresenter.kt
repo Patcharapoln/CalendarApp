@@ -1,5 +1,6 @@
 package com.example.mark.planner
 
+import android.graphics.Color
 import com.github.sundeepk.compactcalendarview.CompactCalendarView
 import com.github.sundeepk.compactcalendarview.domain.Event
 import java.util.*
@@ -18,4 +19,7 @@ class CalendarPresenter (val calendarView: CompactCalendarView){
         return calendar.getEvent(date)
     }
 
+    fun clearEvent(date: Date){
+        calendar.getCalendar().removeEvents(date)
+    }
 }

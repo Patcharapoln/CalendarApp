@@ -55,17 +55,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun handlePress(v: View) {
-        list.clear();
         if (input == null) input.hint = "Input field is empty!!"
         var e = Event(Color.RED,day,input.text.toString())
         presenter.addEvent(e)
-        for(e in this.getEvent()){
-            list.add(e.data as String)
-        }
     }
 
     fun handleView(v: View){
         val intent = Intent(this, ViewActivity::class.java)
+        list.clear()
+        for(e in this.getEvent()){
+            list.add(e.data as String)
+        }
         intent.putExtra("event",list)
         intent.putExtra("date",date)
         startActivity(intent)

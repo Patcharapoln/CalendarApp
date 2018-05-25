@@ -13,7 +13,6 @@ import kotlin.collections.ArrayList
 class Calendar (val c: CompactCalendarView) {
 
     private var calendar = c
-    private var event = ArrayList<Event>()
     fun getCalendar(): CompactCalendarView {
         return calendar
     }

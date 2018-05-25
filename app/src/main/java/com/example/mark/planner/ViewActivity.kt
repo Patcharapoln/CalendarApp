@@ -22,7 +22,6 @@ class ViewActivity: AppCompatActivity() {
     private var adapter1: ArrayAdapter<String>? = null
     private lateinit var event:ArrayList<String>
     private lateinit var presenter:PlannerPresenter
-    private lateinit var calendar:CompactCalendarView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

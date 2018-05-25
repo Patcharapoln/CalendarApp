@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        input = findViewById<View>(R.id.input) as EditText
         button = findViewById<View>(R.id.button) as Button
         actionBar = this!!.supportActionBar!!
         calendar = findViewById<View>(R.id.calendar) as CompactCalendarView
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             override fun onDayClick(dateClicked: Date) {
                 date = dateClicked
                 day = dateClicked.time
+                println(day)
             }
 
             override fun onMonthScroll(firstDayOfNewMonth: Date) {
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 actionBar.title = formatDay.format(firstDayOfNewMonth)
             }
         })
-        input = findViewById<View>(R.id.input) as EditText
+        presenter.initializeCalendar()
     }
 
     fun handlePress(v: View) {

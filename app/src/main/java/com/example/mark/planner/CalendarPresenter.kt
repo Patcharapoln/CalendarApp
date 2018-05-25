@@ -19,7 +19,11 @@ class CalendarPresenter (val calendarView: CompactCalendarView){
         return calendar.getEvent(date)
     }
 
-    fun clearEvent(date: Date){
-        calendar.getCalendar().removeEvents(date)
+    fun initializeCalendar(){
+        calendar.getCalendar().addEvent(Event(Color.GREEN,1525132800000,"Worker day"))
+        calendar.getCalendar().addEvent(Event(Color.GREEN,1523577600000,"Songkran day"))
+        calendar.getCalendar().addEvent(Event(Color.GREEN,1523664000000,"Songkran day"))
+        calendar.getCalendar().addEvent(Event(Color.GREEN,1523750400000,"Songkran day"))
+        calendar.getCalendar().addEvent(Event(Color.GREEN,1527552000000,"Visakabucha day"))
     }
 }
